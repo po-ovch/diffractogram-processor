@@ -59,15 +59,17 @@ namespace DiffractogramApplication.ViewModels
 		
 		public BothPicturesViewModel(string picturePath)
 		{
+			var directory = new DirectoryInfo(Directory.GetCurrentDirectory());
 			InputBitmap = Utils.CreateBitmap(picturePath);
-			ProcessedBitmap = Utils.CreateBitmap(@$"{Utils.ProjectFolder}/resources/graphic.png");
+			ProcessedBitmap = Utils.CreateBitmap(@$"{directory.FullName}\{Utils.ResourcesFolder}\graphic.png");
 			SavePointsCommand = new RelayCommand(SavePoints);
 			Points = ReadPoints();
 		}
 
 		private List<Point> ReadPoints()
 		{
-			var allLines = File.ReadAllLines(@$"{Utils.ProjectFolder}/resources/points.txt");
+			var directory = new DirectoryInfo(Directory.GetCurrentDirectory());
+			var allLines = File.ReadAllLines(@$"{directory.FullName}\{Utils.ResourcesFolder}\points.txt");
 
 			return allLines.Select(line => line.Replace(".", ",").Split(" "))
 				.Select(splitted => new Point()
@@ -91,7 +93,8 @@ namespace DiffractogramApplication.ViewModels
 			fileDialog.Filter = "Text file(*.TXT)|*.txt";
 			if (fileDialog.ShowDialog() != true) return;
 
-			var text = File.ReadAllText(@$"{Utils.ProjectFolder}/resources/points.txt");
+			var directory = new DirectoryInfo(Directory.GetCurrentDirectory());
+			var text = File.ReadAllText(@$"{directory.FullName}\{Utils.ResourcesFolder}\points.txt");
 			var filePath = fileDialog.FileName;
 			File.WriteAllText(filePath, text);
 		}

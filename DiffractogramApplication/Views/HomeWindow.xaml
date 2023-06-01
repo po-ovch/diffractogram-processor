@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiffractogramApplication"
         mc:Ignorable="d"
-        Title="HomeWindow" Height="450" Width="800" >
+        Title="HomeWindow" Height="450" Width="800" WindowState="Maximized" >
     <Grid>
         <TextBlock
             Width="400"
@@ -26,7 +26,6 @@
             Content="Upload"
             Height="50"
             Width="100"
-            Background="Aquamarine"
         />
 
     </Grid>

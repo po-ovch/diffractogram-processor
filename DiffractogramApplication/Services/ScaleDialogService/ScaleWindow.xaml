@@ -22,13 +22,13 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
  
-        <TextBlock>First point X value</TextBlock>
+        <TextBlock>Min X value</TextBlock>
         <TextBox Name="StartXStr" Grid.Row="1" MinWidth="250"/>
-        <TextBlock Grid.Row="2">First point Y value</TextBlock>
+        <TextBlock Grid.Row="2">Max X value</TextBlock>
         <TextBox Name="StartYStr" Grid.Row="3" MinWidth="250"/>
-        <TextBlock Grid.Row="4">Last point X value</TextBlock>
+        <TextBlock Grid.Row="4">Min Y value</TextBlock>
         <TextBox Name="EndXStr" Grid.Row="5" MinWidth="250"/>
-        <TextBlock Grid.Row="6">Last point Y value</TextBlock>
+        <TextBlock Grid.Row="6">Max Y value</TextBlock>
         <TextBox Name="EndYStr" Grid.Row="7" MinWidth="250"/>
  
         <WrapPanel Grid.Row="8" HorizontalAlignment="Right" Margin="0,15,0,0">

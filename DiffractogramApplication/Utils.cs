@@ -5,7 +5,8 @@ namespace DiffractogramApplication
 {
 	public static class Utils
 	{
-		public const string ProjectFolder = @"C:\Users\Polina\RiderProjects\DiffractogramApplication\DiffractogramApplication";
+		public const string ScriptsFolder = "scripts";
+		public const string ResourcesFolder = "resources";
 
 		public static BitmapImage CreateBitmap(string filePath)
 		{

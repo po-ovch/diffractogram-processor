@@ -15,16 +15,6 @@ namespace DiffractogramApplication.Services.ScaleDialogService
 		public ScaleWindow(string picturePath)
 		{
 			InitializeComponent();
-			FillPredictedValues(picturePath);
-		}
-
-		private void FillPredictedValues(string picturePath)
-		{
-			var (startX, startY, endX, endY) = PythonService.PredictScale(picturePath);
-			StartXStr.Text = startX.ToString();
-			StartYStr.Text = startY.ToString();
-			EndXStr.Text = endX.ToString();
-			EndYStr.Text = endY.ToString();
 		}
 
 		private void CloseWindow(object sender, RoutedEventArgs e)
