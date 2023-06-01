@@ -1,4 +1,5 @@
-PROJECT_FOLDER = r"C:\Users\Polina\RiderProjects\DiffractogramApplication\DiffractogramApplication"
+import os
+PROJECT_FOLDER = os.path.dirname(os.path.abspath(__file__))
 
 LINE_THRESHOLD = 0.4
 

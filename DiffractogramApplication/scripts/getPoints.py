@@ -1,4 +1,3 @@
-import traceback
 import cv2 as cv
 from sys import argv
 
@@ -28,6 +27,7 @@ if __name__ == '__main__':
     x_min, y_min, x_max, y_max = float(x_min), float(y_min), float(x_max), float(y_max)
     image = cv.imread(filename, cv.IMREAD_GRAYSCALE)
     image = makeBlackAndWhite(image)
+    print(PROJECT_FOLDER)
             
     im_rows, first_row, last_row = removeHorizontalAxes(image)
     cleared_image, first_col, last_col = removeVerticalAxes(im_rows[first_row:last_row])

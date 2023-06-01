@@ -7,10 +7,10 @@
         xmlns:local="clr-namespace:DiffractogramApplication"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="UserPictureWindow" Height="450" Width="800">
+        Title="UserPictureWindow" Height="450" Width="800" WindowState="Maximized" >
     <Grid>
-        <Border BorderThickness="1" BorderBrush="#FF000000" Height="401" Width="401">
-            <Image Source="{Binding Path=Bitmap}" Height="400" Width="400"/>
+        <Border BorderThickness="1" BorderBrush="#FF000000" Height="500" Width="600">
+            <Image Source="{Binding Path=Bitmap}" Height="500" Width="500"/>
         </Border>
         <fa:ImageAwesome Icon="Spinner" Visibility="{Binding IsLoading}" Spin="True" Height="48" Width="48" />
         <Button
